@@ -44,7 +44,7 @@ class FieldTest extends PHPUnit_Framework_TestCase
 
 	// Tests POST, PUT, PATCH endpoint /field/
 	public function testFieldPost() {
-		$_POST['payload'] = '{"fields": [{"title":"address" , "type":"string"}]}';
+		$_POST['payload'] = '{"title":"address" , "type":"string"}';
 
 		$env = Environment::mock([
             'REQUEST_METHOD' => 'POST',
@@ -59,7 +59,6 @@ class FieldTest extends PHPUnit_Framework_TestCase
         $response = $this->app->run(true);
         $this->assertSame($response->getStatusCode(), 200);
 		$data = json_decode($response->getBody());
-		var_dump($data);
-
+		$this->assertSame($data->message, "Success");
     }
 }

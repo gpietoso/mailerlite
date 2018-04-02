@@ -51,7 +51,7 @@ class App
 		    $this->map(['POST', 'PUT', 'PATCH'], '', function (Request $request, Response $response, $args) {
 
 				$requestBody = $request->getParsedBody();
-
+	
 				if(!array_key_exists('payload', $requestBody)){
 					return $response->withJson(['message' => "No payload found"], 404);
 				} else {
@@ -148,7 +148,7 @@ class App
 		    $this->map(['POST', 'PUT', 'PATCH'], '', function (Request $request, Response $response, $args) {
 
 				$requestBody = $request->getParsedBody();
-
+			
 				if(!array_key_exists('payload', $requestBody)){
 					return $response->withJson(['message' => $requestBody], 200);
 				} else {

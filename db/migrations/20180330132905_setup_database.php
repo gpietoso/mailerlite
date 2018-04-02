@@ -8,7 +8,7 @@ class SetupDatabase extends AbstractMigration
     public function change()
     {
 		//Subscriber table
-		$tableSubscribers = $this->table('subscribers',  ['id' => true, 'primary_key' => 'id', 'signed' => false])
+		$tableSubscribers = $this->table('subscribers',  ['id' => true, 'primary_key' => 'id', 'signed' => false]);
 		$tableSubscribers->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
 			->create();
 
