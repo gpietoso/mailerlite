@@ -12,6 +12,7 @@
 - Run vendor/bin/phinx migrate -e testing
 - Run vendor/bin/phinx seed:run -e testing -s FieldTypeSeeder -s FieldSeeder
 - Run tests: 
-	./vendor/bin/phpunit ./test/FieldTest.php
-	./vendor/bin/phpunit ./test/SubscriberTest.php
+- ./vendor/bin/phpunit ./test/FieldTest.php
+- ./vendor/bin/phpunit ./test/SubscriberTest.php
+
 Please note that some tests presupose created records, specially deletion, updates and gets.
