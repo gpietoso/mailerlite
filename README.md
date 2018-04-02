@@ -15,4 +15,4 @@
 - ./vendor/bin/phpunit ./test/FieldTest.php
 - ./vendor/bin/phpunit ./test/SubscriberTest.php
 
-Please note that some tests presupose created records, specially deletion, updates and gets.
+Please note that some tests presupose created records, specially deletion, updates and gets. Please refer to the source code inside the test files.
