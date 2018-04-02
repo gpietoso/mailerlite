@@ -15,19 +15,19 @@ use PDO;
  *
  * This class provides common connection for all models
  */
-class Base_Model
+class BaseModel
 {
-	var $_connection;
+    var $_connection;
 
-	function __construct() {
+    public function __construct()
+    {
 
-		$dbhost = "localhost";
-		$dbuser = "root";
-		$dbpass = "";
-		$dbname = "testing_db";
+        $dbhost = "localhost";
+        $dbuser = "root";
+        $dbpass = "";
+        $dbname = "testing_db";
 
-		$this->_connection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-		$this->_connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-
+        $this->_connection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+        $this->_connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
 }
